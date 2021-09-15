@@ -11,11 +11,9 @@ var button2 = document.querySelector(".button-2");
 var button3 = document.querySelector(".button-3");
 var button4 = document.querySelector(".button-4");
 var buttonArray = [button1, button2, button3, button4]
+var timeLeft = 31;
 
-// function to begin timer, hide start, and display question set 1 in buttons and instruction text
-startButton.addEventListener("click", function() {
-    var timeLeft = 30;
-
+function timer() {
     timeInterval = setInterval(function () {
         timeLeft--;
         secondsLeftNumber.textContent = timeLeft;
@@ -24,9 +22,22 @@ startButton.addEventListener("click", function() {
         if(timeLeft === 0) {
         clearInterval(timeInterval);}
     }, 1000);
-    displayQuestionSet1();
+};
+// function to begin timer, hide start, and display question set 1 in buttons and instruction text
+startButton.addEventListener("click", function() {
+
+    // timeInterval = setInterval(function () {
+    //     timeLeft--;
+    //     secondsLeftNumber.textContent = timeLeft;
+    //     console.log(timeLeft);
+
+    //     if(timeLeft === 0) {
+    //     clearInterval(timeInterval);}
+    // }, 1000);
     changeStartVisibility();
     changeButtonVisibility();
+    timer();
+    displayQuestionSet1();
     return;
 });
 
@@ -63,69 +74,77 @@ function changeButtonVisibility() {
 
 // functions to change text in buttons 1-4 and instructions to different sets 
 function displayQuestionSet1 () {
-    instructionText.textContent = "Whats your favorite color?"
-    button1.textContent = "Blue";
-    button2.textContent = "Red";
-    button3.textContent = "Green";
-    button4.textContent = "Orange";
+    instructionText.textContent = "Which is a correct way to add 'display: none' to a variable named 'header'?"
+    button1.textContent = "header.setAttribute(display, none)";
+    button2.textContent = "header.style.display(none)";
+    button3.textContent = "header.setAttribute('display', 'none')";
+    button4.textContent = "header.style.display = 'none'";
     button.forEach(item => {
         item.addEventListener('click', event => {
-            if (item == button1) {
-                secondsLeftNumber += 10;}
+            if (item = buttonArray[3]) {
+                timeLeft += 10;}
             else {
-                secondsleftNumber -= 5;};
+                timeLeft -= 5;};
+    // timer();
     displayQuestionSet2();
+    return;
     });
 });
 }
 
 function displayQuestionSet2 () {
-    instructionText.textContent = "Whats your favorite food??"
-    button1.textContent = "Burgers";
-    button2.textContent = "Curry";
-    button3.textContent = "Sushi";
-    button4.textContent = "Salad";
+    instructionText.textContent = "using  var___ = document.querySelectAll, on a class present on multiple elements within the document, will create:"
+    button1.textContent = "a boolean";
+    button2.textContent = "an array";
+    button3.textContent = "a number";
+    button4.textContent = "you cannot declare a variable under these circumstances";
     button.forEach(item => {
         item.addEventListener('click', event => {
-            if (item == button1) {
-                secondsLeftNumber += 10;}
+            if (item = buttonArray[1]) {
+                timeLeft += 10;}
             else {
-                secondsleftNumber -= 5;};
+                timeLeft -= 5;};
+    // timer();
     displayQuestionSet3();
+    return;
     });
 });
 }
 
 function displayQuestionSet3 () {
-    instructionText.textContent = "Whats your favorite dog breed?"
-    button1.textContent = "Doberman";
-    button2.textContent = "Chihuahua";
-    button3.textContent = "Golden Retriever";
-    button4.textContent = "Corgi";
+    instructionText.textContent = "We use 'stopPropogation()' in order to:"
+    button1.textContent = "prevent an infitite loop";
+    button2.textContent = "end a function";
+    button3.textContent = "prevent a 404 message / being redirected to a different page";
+    button4.textContent = "prevent event bubbling";
     button.forEach(item => {
         item.addEventListener('click', event => {
-            if (item == button1) {
-                secondsLeftNumber += 10;}
+            if (item = buttonArray[3]) {
+                timeLeft += 10;}
             else {
-                secondsleftNumber -= 5;};
+                timeLeft -= 5;};
+    // timer();
     displayQuestionSet4();
+    return;
     });
 });
 }
 
 function displayQuestionSet4 () {
-    instructionText.textContent = "Whats your favorite music?"
-    button1.textContent = "RnB";
-    button2.textContent = "Rap";
-    button3.textContent = "Pop";
-    button4.textContent = "Metal";
+    instructionText.textContent = "We use 'for loops' in order to"
+    button1.textContent = "declare/create a function";
+    button2.textContent = "finish an if statement";
+    button3.textContent = "execute code repeatedly ";
+    button4.textContent = "give an alternative when if statement conditions are not met";
     button.forEach(item => {
         item.addEventListener('click', event => {
-            if (item == button1) {
-                secondsLeftNumber += 10;}
+            if (item = buttonArray[2]) {
+                timeLeft += 10;}
             else {
-                secondsleftNumber -= 5;};
+                timeLeft -= 5;};
+    // timer();
     displayQuestionSet5();
+    return;
     });
 });
 }
@@ -138,11 +157,13 @@ function displayQuestionSet5 () {
     button4.textContent = "Winter";
     button.forEach(item => {
         item.addEventListener('click', event => {
-            if (item == button1) {
-                secondsLeftNumber += 10;}
+            if (item = buttonArray[0]) {
+                timeLeft += 10;}
             else {
-                secondsleftNumber -= 5;};
+                timeLeft -= 5;};
+    // timer();
     displayQuestionSet1();
+    return;
     });
 });
 }
