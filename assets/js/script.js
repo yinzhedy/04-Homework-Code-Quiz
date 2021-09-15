@@ -11,7 +11,7 @@ var button3 = document.querySelector(".button-3");
 var button4 = document.querySelector(".button-4");
 var buttonArray = [button1, button2, button3, button4]
 
-
+// function to begin timer, hide start, and display question set 1 in buttons and instruction text
 startButton.addEventListener("click", function() {
     var timeLeft = 30;
 
@@ -27,23 +27,22 @@ startButton.addEventListener("click", function() {
     changeStartVisibility();
     changeButtonVisibility();
 });
-// function to begin quiz
-// start timer
 
 
-// change -data-visibility on answer buttons, start button, and title
-// change the text inside of instruction text
+// change visibility of Start button
 function changeStartVisibility () {
     var visibility = startButton.getAttribute("data-visibility");
 
     if(visibility === "visible") {
-        startButton.setAttribute("display", "none");
-        startButton.setAttribute("data-visibility", "hidden");}
+        startButton.style.display = "none";
+        startButton.setAttribute("data-visibility", "hidden");
+    console.log(startButton.getAttribute("display"))}
     else {
-        startButton.removeAttribute("display", "none");
+        startButton.removeAttribute("style", "display:none");
         startButton.setAttribute("data-visibility", "visible");}
 }
 
+// change visibility of answer buttons (buttons1-4)
 function changeButtonVisibility() {
     for (let i = 0; i < buttonArray.length; i++) {
         
@@ -52,14 +51,15 @@ function changeButtonVisibility() {
     var visibility = buttonArray[i].getAttribute("data-visibility");
 
         if(visibility === "hidden") {
-         buttonArray[i].removeAttribute("display", "none");
+         buttonArray[i].removeAttribute("style", "display:none");
         buttonArray[i].setAttribute("data-visibility", "visible");}
         else {
-        buttonArray[i].setAttribute("display", "none");
+        buttonArray[i].style.display = "none";
         buttonArray[i].setAttribute("data-visibility", "hidden");} 
     }
 ;}
 
+// functions to change text in buttons 1-4 and instructions to different sets 
 function displayQuestionSet1 () {
     instructionText.textContent = "Whats your favorite color?"
     button1.textContent = "Blue";
