@@ -84,10 +84,11 @@ function displayQuestionSet1 () {
         item.addEventListener('click', event => {
             event.stopPropagation();
             if (item = buttonArray[3]) {
-                numberCorrectDisplay.value += 1;
+                numberCorrectDisplay.textContent += 1;
                 timeLeft += 10;}
             else {
                 timeLeft -= 5;};
+                numberIncorrectDisplay.textContent -= 1;
     // timer();
     displayQuestionSet2();
     return;
@@ -105,10 +106,11 @@ function displayQuestionSet2 () {
         event.stopPropagation();
         item.addEventListener('click', event => {
             if (item = buttonArray[1]) {
-                numberCorrectDisplay.value += 1;
+                numberCorrectDisplay.textContent += 1;
                 timeLeft += 10;}
             else {
                 timeLeft -= 5;};
+                numberIncorrectDisplay.textContent -= 1;
     // timer();
     displayQuestionSet3();
     return;
@@ -126,10 +128,11 @@ function displayQuestionSet3 () {
         item.addEventListener('click', event => {
             event.stopPropagation();
             if (item = buttonArray[3]) {
-                numberCorrectDisplay.value += 1;
+                numberCorrectDisplay.textContent += 1;
                 timeLeft += 10;}
             else {
                 timeLeft -= 5;};
+                numberIncorrectDisplay.textContent -= 1;
     // timer();
     displayQuestionSet4();
     return;
@@ -148,10 +151,11 @@ function displayQuestionSet4 () {
         item.addEventListener('click', event => {
             event.stopPropagation();
             if (item = buttonArray[2]) {
-                numberCorrectDisplay.value += 1;
+                numberCorrectDisplay.textContent += 1;
                 timeLeft += 10;}
             else {
                 timeLeft -= 5;};
+                numberIncorrectDisplay.textContent -= 1;
     // timer();
     displayQuestionSet5();
     return;
@@ -169,10 +173,11 @@ function displayQuestionSet5 () {
         item.addEventListener('click', event => {
             event.stopPropagation();
             if (item = buttonArray[0]) {
-                numberCorrectDisplay.value += 1;
+                numberCorrectDisplay.textContent += 1;
                 timeLeft += 10;}
             else {
                 timeLeft -= 5;};
+                numberIncorrectDisplay.textContent -= 1;
     // timer();
     displayQuestionSet1();
     return;
