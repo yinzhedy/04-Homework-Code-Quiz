@@ -150,11 +150,11 @@ function displayQuestionSet4 () {
 }
 
 function displayQuestionSet5 () {
-    instructionText.textContent = "Whats your favorite season?"
-    button1.textContent = "Spring";
-    button2.textContent = "Summer";
-    button3.textContent = "Fall";
-    button4.textContent = "Winter";
+    instructionText.textContent = "What is the difference between declaring var using querySelector() and querySelectorAll() ?"
+    button1.textContent = "querySelector selects a single class/element/id/etc., querySelectorAll selects anything with the selected class/element/id/etc.";
+    button2.textContent = "querySelectorAll selects anything with the selected class/element/id/etc., querySelector selects a single class/element/id/etc.";
+    button3.textContent = "querySelector selects only by element type, querySelectorAll selects all elements.";
+    button4.textContent = "querySelector can only assigns value to a variable, querySelectorAll can only assigns value to a constant";
     button.forEach(item => {
         item.addEventListener('click', event => {
             if (item = buttonArray[0]) {
