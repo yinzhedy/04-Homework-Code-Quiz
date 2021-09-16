@@ -4,7 +4,7 @@
     padding-top: 10px;
 }
 
-.high-scores {
+.high-scores, .high-scores-text {
     float: left;
     margin-left: 15px;
 }

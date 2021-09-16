@@ -84,7 +84,7 @@ function displayQuestionSet1 () {
         item.addEventListener('click', event => {
             event.stopPropagation();
             if (item = buttonArray[3]) {
-                highScoresText.textContent += 1;
+                numberCorrectDisplay.value += 1;
                 timeLeft += 10;}
             else {
                 timeLeft -= 5;};
@@ -105,7 +105,7 @@ function displayQuestionSet2 () {
         event.stopPropagation();
         item.addEventListener('click', event => {
             if (item = buttonArray[1]) {
-                highScoresText.textContent += 1;
+                numberCorrectDisplay.value += 1;
                 timeLeft += 10;}
             else {
                 timeLeft -= 5;};
@@ -126,7 +126,7 @@ function displayQuestionSet3 () {
         item.addEventListener('click', event => {
             event.stopPropagation();
             if (item = buttonArray[3]) {
-                highScoresText.textContent += 1;
+                numberCorrectDisplay.value += 1;
                 timeLeft += 10;}
             else {
                 timeLeft -= 5;};
@@ -148,7 +148,7 @@ function displayQuestionSet4 () {
         item.addEventListener('click', event => {
             event.stopPropagation();
             if (item = buttonArray[2]) {
-                highScoresText.textContent += 1;
+                numberCorrectDisplay.value += 1;
                 timeLeft += 10;}
             else {
                 timeLeft -= 5;};
@@ -169,7 +169,7 @@ function displayQuestionSet5 () {
         item.addEventListener('click', event => {
             event.stopPropagation();
             if (item = buttonArray[0]) {
-                highScoresText.textContent += 1;
+                numberCorrectDisplay.value += 1;
                 timeLeft += 10;}
             else {
                 timeLeft -= 5;};
