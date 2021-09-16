@@ -25,6 +25,7 @@ function timer() {
 };
 // function to begin timer, hide start, and display question set 1 in buttons and instruction text
 startButton.addEventListener("click", function() {
+    event.stopPropagation();
 
     // timeInterval = setInterval(function () {
     //     timeLeft--;
@@ -81,7 +82,9 @@ function displayQuestionSet1 () {
     button4.textContent = "header.style.display = 'none'";
     button.forEach(item => {
         item.addEventListener('click', event => {
+            event.stopPropagation();
             if (item = buttonArray[3]) {
+                highScoresText.textContent += 1;
                 timeLeft += 10;}
             else {
                 timeLeft -= 5;};
@@ -99,8 +102,10 @@ function displayQuestionSet2 () {
     button3.textContent = "a number";
     button4.textContent = "you cannot declare a variable under these circumstances";
     button.forEach(item => {
+        event.stopPropagation();
         item.addEventListener('click', event => {
             if (item = buttonArray[1]) {
+                highScoresText.textContent += 1;
                 timeLeft += 10;}
             else {
                 timeLeft -= 5;};
@@ -119,7 +124,9 @@ function displayQuestionSet3 () {
     button4.textContent = "prevent event bubbling";
     button.forEach(item => {
         item.addEventListener('click', event => {
+            event.stopPropagation();
             if (item = buttonArray[3]) {
+                highScoresText.textContent += 1;
                 timeLeft += 10;}
             else {
                 timeLeft -= 5;};
@@ -137,8 +144,11 @@ function displayQuestionSet4 () {
     button3.textContent = "execute code repeatedly ";
     button4.textContent = "give an alternative when if statement conditions are not met";
     button.forEach(item => {
+        event.stopPropagation();
         item.addEventListener('click', event => {
+            event.stopPropagation();
             if (item = buttonArray[2]) {
+                highScoresText.textContent += 1;
                 timeLeft += 10;}
             else {
                 timeLeft -= 5;};
@@ -157,7 +167,9 @@ function displayQuestionSet5 () {
     button4.textContent = "querySelector can only assigns value to a variable, querySelectorAll can only assigns value to a constant";
     button.forEach(item => {
         item.addEventListener('click', event => {
+            event.stopPropagation();
             if (item = buttonArray[0]) {
+                highScoresText.textContent += 1;
                 timeLeft += 10;}
             else {
                 timeLeft -= 5;};
